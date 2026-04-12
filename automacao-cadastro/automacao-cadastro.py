@@ -1,8 +1,8 @@
-# 1° abrir o chrome
-# 2° abrir o sistema
-# 3° fazer login no sistema
-# 4° abrir a base de dados
-# 5° cadastrar todos os produtos da tabela
+# 1° Abrir o chrome
+# 2° Abrir o sistema
+# 3° Fazer login no sistema
+# 4° Abrir a base de dados
+# 5° Cadastrar todos os produtos da tabela
 
 import pyautogui
 import time
@@ -10,17 +10,17 @@ import pandas
 
 pyautogui.PAUSE = 2
 
-# 1° abrir o chrome
+# 1° Abrir o chrome
 pyautogui.press("win")
 pyautogui.press("enter")
 pyautogui.press("enter")
 time.sleep(4)
 
-# 2° abrir o sistema
+# 2° Abrir o sistema
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login") # Fictício
 pyautogui.press("enter")
 
-# 3° fazer login no sistema
+# 3° Fazer login no sistema
 pyautogui.press("tab")
 pyautogui.write("aleatorio@gmail.com")
 pyautogui.press("tab")
@@ -29,10 +29,10 @@ pyautogui.press("tab")
 pyautogui.press("enter")
 time.sleep(4)
 
-# 4° abrir a base de dados
+# 4° Abrir a base de dados
 tabela = pandas.read_csv("produtos.csv")
 
-# 5° cadastrar todos os produtos da tabela
+# 5° Cadastrar todos os produtos da tabela
 for linha in tabela.index:
     pyautogui.click(x=516, y=260)
     
